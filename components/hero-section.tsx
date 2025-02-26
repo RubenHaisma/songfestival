@@ -72,13 +72,13 @@ export default function HeroSection() {
           )}
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
-            <span className="block">Eurovision Song Contest</span>
+            <span className="block">Songfestival</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-red-500 animate-gradient">
               Basel 2025
             </span>
           </h1>
           <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Experience the magic of Europe's biggest music competition in the heart of Switzerland. 
+            Experience the magic of Europe&apos;s biggest music competition in the heart of Switzerland. 
             37 countries, 3 spectacular shows, 1 unforgettable celebration.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

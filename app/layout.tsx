@@ -8,6 +8,7 @@ import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 import Analytics from '@/components/analytics';
 import { Suspense } from 'react';
+import UnofficialDisclaimer from '@/components/unofficial';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
@@ -110,11 +111,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {/* Unofficial site disclaimer banner */}
-          <div className="bg-yellow-500/10 border-b border-yellow-500/30 py-2 px-4 text-center text-sm">
-            <strong>UNOFFICIAL FAN SITE:</strong> This is an unofficial Eurovision fan website with no affiliation to the European Broadcasting Union (EBU) or the official Eurovision Song Contest.
-          </div>
-          
           <div className="min-h-screen flex flex-col">
             <Navbar />
             <main className="flex-grow">{children}</main>
