@@ -7,6 +7,7 @@ import { Toaster as SonnerToaster } from '@/components/ui/sonner';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 import Analytics from '@/components/analytics';
+import { Suspense } from 'react';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
@@ -122,8 +123,11 @@ export default function RootLayout({
           <Toaster />
           <SonnerToaster />
         </ThemeProvider>
-        <Analytics />
-      </body>
+
+        <Suspense fallback={null}>
+          <Analytics />
+        </Suspense>      
+        </body>
     </html>
   );
 }
