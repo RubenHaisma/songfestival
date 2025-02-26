@@ -23,6 +23,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [disclaimerHeight, setDisclaimerHeight] = useState(0);
+  const [showDisclaimer, setShowDisclaimer] = useState(true);
 
   // Handle scroll effect
   useEffect(() => {
@@ -33,27 +34,41 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Dynamically calculate disclaimer height
+  // Dynamically calculate disclaimer height and hide after 10 seconds
   useEffect(() => {
-    const disclaimer = document.querySelector(".disclaimer-container"); // Assuming UnofficialDisclaimer has this class
+    const disclaimer = document.querySelector(".disclaimer-container");
     if (disclaimer) {
       const height = disclaimer.getBoundingClientRect().height;
       setDisclaimerHeight(height);
-      // Update height on resize for responsiveness
       const handleResize = () => {
         setDisclaimerHeight(disclaimer.getBoundingClientRect().height);
       };
       window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
+
+      // Hide disclaimer after 10 seconds
+      const timer = setTimeout(() => {
+        setShowDisclaimer(false);
+        setDisclaimerHeight(0); // Reset height when hidden
+      }, 10000); // 10 seconds
+
+      return () => {
+        window.removeEventListener("resize", handleResize);
+        clearTimeout(timer); // Cleanup timer on unmount
+      };
     }
   }, []);
 
   return (
     <>
-      {/* Fixed Disclaimer */}
-      <div className="fixed top-0 left-0 w-full z-50 disclaimer-container">
-        <UnofficialDisclaimer />
-      </div>
+      {/* Fixed Disclaimer with fade-out */}
+      {showDisclaimer && (
+        <div
+          className="fixed top-0 left-0 w-full z-50 disclaimer-container transition-opacity duration-500"
+          style={{ opacity: showDisclaimer ? 1 : 0 }}
+        >
+          <UnofficialDisclaimer />
+        </div>
+      )}
 
       {/* Adjusted Header with dynamic top offset */}
       <header
@@ -63,7 +78,7 @@ export default function Navbar() {
             ? "bg-background/80 backdrop-blur-md border-b"
             : "bg-transparent"
         )}
-        style={{ top: `${disclaimerHeight}px` }} // Dynamic offset based on disclaimer height
+        style={{ top: `${disclaimerHeight}px` }} // Dynamic offset, 0 when disclaimer is hidden
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
@@ -133,7 +148,7 @@ export default function Navbar() {
         {mobileMenuOpen && (
           <div
             className="md:hidden bg-background/95 backdrop-blur-sm border-b"
-            style={{ top: `${disclaimerHeight}px` }} // Offset mobile menu too
+            style={{ top: `${disclaimerHeight}px` }} // Offset mobile menu, 0 when disclaimer is hidden
           >
             <div className="container mx-auto px-4 py-4">
               <nav className="flex flex-col space-y-4">
