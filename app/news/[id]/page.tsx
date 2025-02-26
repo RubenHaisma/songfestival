@@ -124,17 +124,17 @@ const categoryColors: Record<string, string> = {
 };
 
 interface NewsArticlePageProps {
-  params: {
-    id: string;
-  };
-}
-
-export default function NewsArticlePage({ params }: NewsArticlePageProps) {
-  const article = newsItems.find(item => item.id === Number(params.id));
-
-  if (!article) {
-    notFound();
+    params: Promise<{ id: string }>; // Changed to Promise
   }
+  
+  export default async function NewsArticlePage({ params }: NewsArticlePageProps) { // Added async
+    const resolvedParams = await params; // Resolve the Promise
+    const article = newsItems.find(item => item.id === Number(resolvedParams.id)); // Use resolved params
+    
+    // Rest of your code remains unchanged
+    if (!article) {
+      notFound();
+    }
 
   return (
     <div className="py-16 container mx-auto px-4">

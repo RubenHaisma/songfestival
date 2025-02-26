@@ -278,13 +278,19 @@ const artists = [
   },
 ];
 
-export default function ArtistPage({ params }: { params: { id: string } }) {
-  const artistId = parseInt(params.id);
-  const artist = artists.find(a => a.id === artistId);
-  
-  if (!artist) {
-    notFound();
+interface ArtistPageProps {
+    params: Promise<{ id: string }>; // Changed to Promise
   }
+  
+  export default async function ArtistPage({ params }: ArtistPageProps) { // Added async
+    const resolvedParams = await params; // Resolve the Promise
+    const artistId = parseInt(resolvedParams.id); // Use resolved params
+    const artist = artists.find(a => a.id === artistId);
+    
+    // Rest of your code remains unchanged
+    if (!artist) {
+      notFound();
+    }
 
   return (
     <div className="py-16 container mx-auto px-4">

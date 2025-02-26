@@ -171,11 +171,7 @@ export default function ContactPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="p-4 bg-muted/30 rounded-lg">
                   <h4 className="font-medium mb-2">Email</h4>
-                  <p className="text-sm text-muted-foreground">eurovisionfan2025@example.com</p>
-                </div>
-                <div className="p-4 bg-muted/30 rounded-lg">
-                  <h4 className="font-medium mb-2">Social Media</h4>
-                  <p className="text-sm text-muted-foreground">Follow us on Twitter, Instagram, and TikTok @EurovisionFan2025</p>
+                  <p className="text-sm text-muted-foreground">info@songfestival2025.nl</p>
                 </div>
               </div>
             </div>
