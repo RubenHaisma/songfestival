@@ -6,6 +6,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { Toaster as SonnerToaster } from '@/components/ui/sonner';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
+import Analytics from '@/components/analytics';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -37,6 +38,7 @@ export default function RootLayout({
           <Toaster />
           <SonnerToaster />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
