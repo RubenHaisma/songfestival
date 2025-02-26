@@ -15,7 +15,7 @@ const routes = [
   { name: "Schedule", path: "/schedule" },
   { name: "Vote", path: "/vote" },
   { name: "News", path: "/news" },
-  { name: "Tickets", path: "/tickets" },
+  // { name: "Tickets", path: "/tickets" },
 ];
 
 export default function Navbar() {

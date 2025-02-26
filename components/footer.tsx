@@ -43,26 +43,6 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Follow Us</h3>
             <ul className="space-y-2">
-              <li>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Instagram
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Twitter
-                </a>
-              </li>
-              <li>
-                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  YouTube
-                </a>
-              </li>
-              <li>
-                <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  TikTok
-                </a>
-              </li>
             </ul>
           </div>
           
