@@ -16,14 +16,14 @@ const inter = Inter({ subsets: ['latin'], display: 'swap' });
 export const metadata: Metadata = {
   metadataBase: new URL('https://songfestival2025.nl'),
   title: {
-    default: 'Eurovision Songfestival 2025 | Unofficial Fan Site',
-    template: '%s | Eurovision 2025 Unofficial Fan Site'
+    default: 'Songfestival 2025 | Unofficial Fan Site',
+    template: '%s | Eurovision Songfestival 2025 Unofficial Fan Site'
   },
   description: 'Unofficial fan site for Eurovision Song Contest 2025 in Basel, Switzerland. Explore participating countries, artists, songs, and event information. Not affiliated with the EBU or official Eurovision.',
   keywords: ['Eurovision 2025', 'Basel', 'Switzerland', 'Eurovision fan site', 'Eurovision songs', 'Eurovision artists', 'Eurovision schedule', 'unofficial Eurovision', 'fan site'],
   authors: [{ name: 'Eurovision Fan Community' }],
-  creator: 'Eurovision Fan Community',
-  publisher: 'Eurovision Fan Community',
+  creator: 'Songfestival Fan Community',
+  publisher: 'Songfestival Fan Community',
   formatDetection: {
     email: false,
     address: false,
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
     url: 'https://songfestival2025.nl',
     title: 'Eurovision Songfestival 2025 | Unofficial Fan Site',
     description: 'Unofficial fan site for Eurovision Song Contest 2025 in Basel, Switzerland. Explore participating countries, artists, songs, and event information.',
-    siteName: 'Eurovision 2025 Unofficial Fan Site',
+    siteName: 'Eurovision Songfestival 2025 Unofficial Fan Site',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=1200&h=630&fit=crop',
         width: 1200,
         height: 630,
-        alt: 'Eurovision 2025 Unofficial Fan Site',
+        alt: 'Eurovision Songfestival 2025 Unofficial Fan Site',
       },
     ],
   },
@@ -92,14 +92,14 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "name": "Eurovision 2025 Unofficial Fan Site",
+              "name": "Eurovision Songfestival 2025 Unofficial Fan Site",
               "url": "https://songfestival2025.nl",
               "potentialAction": {
                 "@type": "SearchAction",
                 "target": "https://songfestival2025.nl/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               },
-              "description": "Unofficial fan site for Eurovision Song Contest 2025 in Basel, Switzerland. Explore participating countries, artists, songs, and event information.",
+              "description": "Unofficial fan site for Eurovision Songfestival 2025 in Basel, Switzerland. Explore participating countries, artists, songs, and event information.",
             })
           }}
         />

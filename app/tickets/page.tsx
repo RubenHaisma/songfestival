@@ -115,7 +115,7 @@ export default function TicketsPage() {
       <div className="max-w-3xl mx-auto text-center mb-12">
         <h1 className="text-4xl font-bold mb-4">Tickets</h1>
         <p className="text-xl text-muted-foreground">
-          Secure your place at the Eurovision Song Contest 2025 in Basel, Switzerland.
+          Secure your place at the Eurovision Songfestival 2025 in Basel, Switzerland.
         </p>
       </div>
 

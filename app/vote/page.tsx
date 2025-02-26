@@ -13,7 +13,7 @@ export default function VotePage() {
       <div className="max-w-3xl mx-auto text-center mb-12">
         <h1 className="text-4xl font-bold mb-4">Fan Voting</h1>
         <p className="text-xl text-muted-foreground">
-          Cast your vote for your favorite Eurovision 2025 entries and see how they compare with other fans&apos; choices.
+          Cast your vote for your favorite Songfestival 2025 entries and see how they compare with other fans&apos; choices.
         </p>
       </div>
 
@@ -23,7 +23,7 @@ export default function VotePage() {
           <div>
             <h3 className="font-medium text-foreground">Voting Opens May 1, 2025</h3>
             <p className="text-sm text-muted-foreground mt-1">
-              The official fan voting for Eurovision 2025 will open on May 1st. Sign up for a reminder to be notified when voting begins.
+              The official fan voting for Songfestival 2025 will open on May 1st. Sign up for a reminder to be notified when voting begins.
             </p>
             <Button className="mt-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
               Remind Me When Voting Opens
@@ -42,7 +42,7 @@ export default function VotePage() {
         <TabsContent value="preview" className="space-y-8">
           <Card>
             <CardHeader>
-              <CardTitle>Eurovision 2025 Fan Vote Preview</CardTitle>
+              <CardTitle>Songfestival 2025 Fan Vote Preview</CardTitle>
               <CardDescription>
                 Try out our voting simulator to see how the voting experience will work. Your votes won&apos;t be counted until the official voting period begins.
               </CardDescription>
@@ -441,11 +441,11 @@ export default function VotePage() {
               <div className="space-y-8">
                 <div className="bg-muted/30 rounded-lg p-6">
                   <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                    <Info className="h-5 w-5 text-blue-500" /> Official Eurovision Voting System
+                    <Info className="h-5 w-5 text-blue-500" /> Unofficial Eurovision Voting System
                   </h3>
                   <div className="space-y-4">
                     <p>
-                      The Eurovision Song Contest uses a combined voting system where both professional juries and viewers from participating countries award points to their favorite performances.
+                      The Eurovision Songfestival uses a combined voting system where both professional juries and viewers from participating countries award points to their favorite performances.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>

@@ -24,7 +24,7 @@ export default function PrivacyPage() {
           </CardHeader>
           <CardContent className="pt-6 prose dark:prose-invert max-w-none text-foreground">
             <p className="font-semibold">
-              This is an unofficial fan website dedicated to the Eurovision Song Contest. This website has no affiliation with, and is not endorsed by, the European Broadcasting Union (EBU), the official Eurovision Song Contest, or any participating broadcasters. I have nothing to do with the original event.
+              This is an unofficial fan website dedicated to the Eurovision Songfestival. This website has no affiliation with, and is not endorsed by, the European Broadcasting Union (EBU), the official Eurovision Song Contest, or any participating broadcasters. I have nothing to do with the original event.
             </p>
             <p>
               All Eurovision-related logos, trademarks, and copyrighted materials belong to their respective owners. This website is created for informational and entertainment purposes only.

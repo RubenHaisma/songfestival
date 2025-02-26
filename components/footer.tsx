@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Eurovision 2025</h3>
+            <h3 className="text-lg font-semibold">Songfestival 2025</h3>
             <p className="text-sm text-muted-foreground">
               The 69th Eurovision Song Contest will take place in Basel, Switzerland on May 13, 15, and 17, 2025.
             </p>
@@ -65,7 +65,7 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-muted-foreground">
-              &copy; {new Date().getFullYear()} Eurovision Song Contest 2025. All rights reserved.
+              &copy; {new Date().getFullYear()}  Incubit. All rights reserved.
             </p>
             <div className="flex items-center space-x-4 mt-4 md:mt-0">
               <Link href="/privacy" className="text-xs text-muted-foreground hover:text-primary transition-colors">

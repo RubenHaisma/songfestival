@@ -151,7 +151,7 @@ export default function ArtistsPage() {
       <div className="max-w-3xl mx-auto text-center mb-12">
         <h1 className="text-4xl font-bold mb-4">Artists & Songs</h1>
         <p className="text-xl text-muted-foreground">
-          Meet the talented performers representing 37 countries at Eurovision Song Contest 2025 in Basel, Switzerland.
+          Meet the talented performers representing 37 countries at Eurovision Songfestival 2025 in Basel, Switzerland.
         </p>
       </div>
 

@@ -131,7 +131,7 @@ export default function SchedulePage() {
       <div className="max-w-3xl mx-auto text-center mb-12">
         <h1 className="text-4xl font-bold mb-4">Event Schedule</h1>
         <p className="text-xl text-muted-foreground">
-          Plan your Eurovision experience with our comprehensive schedule of all events taking place in Basel, Switzerland.
+          Plan your Eurovision Songfestival experience with our comprehensive schedule of all events taking place in Basel, Switzerland.
         </p>
       </div>
 
