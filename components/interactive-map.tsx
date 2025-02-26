@@ -50,9 +50,9 @@ const countries = [
 ];
 
 export default function SoundwaveOrganism() {
-  const [hoveredCountry, setHoveredCountry] = useState(null);
+  const [hoveredCountry, setHoveredCountry] = useState<string | null>(null);
   const [time, setTime] = useState(0);
-  const organismRef = useRef(null);
+  const organismRef = useRef<HTMLDivElement>(null);
 
   // Animation loop
   useEffect(() => {
@@ -65,7 +65,7 @@ export default function SoundwaveOrganism() {
   }, []);
 
   // Dynamic positioning
-  const getPosition = (index, containerWidth) => {
+  const getPosition = (index: number, containerWidth: number) => {
     const baseRadius = Math.min(containerWidth * 0.35, 300); // Responsive radius
     const angle = (index / countries.length) * Math.PI * 2;
     const radius = baseRadius + Math.sin(time + index) * (baseRadius * 0.2);
