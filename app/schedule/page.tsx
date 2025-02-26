@@ -211,7 +211,7 @@ export default function SchedulePage() {
                 </Link>
               </Button>
               <Button variant="outline" asChild className="flex items-center gap-2">
-                <Link href="https://maps.app.goo.gl/St.JakobshalleBasel" target="_blank">
+                <Link href="https://maps.app.goo.gl/1wdQxnZyw2WGB7St7" target="_blank">
                   <MapPin className="h-4 w-4" /> Venue Information
                 </Link>
               </Button>
