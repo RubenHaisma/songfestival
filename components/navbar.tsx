@@ -47,11 +47,11 @@ export default function Navbar() {
               <div className="relative w-8 h-8">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-red-500 rounded-full animate-pulse"></div>
                 <div className="absolute inset-1 bg-background rounded-full flex items-center justify-center">
-                  <span className="text-lg font-bold">E</span>
+                  <span className="text-lg font-bold"></span>
                 </div>
               </div>
               <span className="font-bold text-xl hidden sm:inline-block">
-                Eurovision 2025
+                Songfestival 2025
               </span>
             </Link>
           </div>
