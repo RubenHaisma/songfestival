@@ -58,9 +58,6 @@ export default function Navbar() {
                     <span className="text-lg font-bold"></span>
                   </div>
                 </div>
-                <span className="font-bold text-xl hidden sm:inline-block">
-                  Songfestival 2025
-                </span>
               </Link>
             </div>
 

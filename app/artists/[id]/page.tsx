@@ -293,7 +293,7 @@ interface ArtistPageProps {
     }
 
   return (
-    <div className="py-16 container mx-auto px-4">
+    <div className="py-16 container mx-auto px-4 mt-14">
       <div className="mb-8">
         <Button variant="ghost" asChild className="flex items-center gap-2">
           <Link href="/artists">

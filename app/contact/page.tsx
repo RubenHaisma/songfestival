@@ -47,7 +47,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen py-16 bg-gradient-to-b from-background to-muted/20">
+    <div className="min-h-screen py-16 bg-gradient-to-b from-background to-muted/20 mt-14">
       <div className="container mx-auto px-4 max-w-3xl">
         <header className="mb-12 text-center">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">

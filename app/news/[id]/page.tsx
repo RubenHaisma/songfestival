@@ -137,7 +137,7 @@ interface NewsArticlePageProps {
     }
 
   return (
-    <div className="py-16 container mx-auto px-4">
+    <div className="py-16 container mx-auto px-4 mt-14">
       <div className="max-w-3xl mx-auto">
         <Card className="border-none shadow-lg">
           <div className="relative aspect-[16/9] overflow-hidden">

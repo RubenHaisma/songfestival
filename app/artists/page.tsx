@@ -147,7 +147,7 @@ const artists = [
 
 export default function ArtistsPage() {
   return (
-    <div className="py-16 container mx-auto px-4">
+    <div className="py-16 container mx-auto px-4 mt-14">
       <div className="max-w-3xl mx-auto text-center mb-12">
         <h1 className="text-4xl font-bold mb-4">Artists & Songs</h1>
         <p className="text-xl text-muted-foreground">
