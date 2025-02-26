@@ -15,7 +15,6 @@ const routes = [
   { name: "Schedule", path: "/schedule" },
   { name: "Vote", path: "/vote" },
   { name: "News", path: "/news" },
-  // { name: "Tickets", path: "/tickets" },
 ];
 
 export default function Navbar() {
@@ -23,7 +22,9 @@ export default function Navbar() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [disclaimerHeight, setDisclaimerHeight] = useState(0);
 
+  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -32,21 +33,37 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Dynamically calculate disclaimer height
+  useEffect(() => {
+    const disclaimer = document.querySelector(".disclaimer-container"); // Assuming UnofficialDisclaimer has this class
+    if (disclaimer) {
+      const height = disclaimer.getBoundingClientRect().height;
+      setDisclaimerHeight(height);
+      // Update height on resize for responsiveness
+      const handleResize = () => {
+        setDisclaimerHeight(disclaimer.getBoundingClientRect().height);
+      };
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
   return (
     <>
       {/* Fixed Disclaimer */}
-      <div className="fixed top-0 w-full z-50">
+      <div className="fixed top-0 left-0 w-full z-50 disclaimer-container">
         <UnofficialDisclaimer />
       </div>
 
-      {/* Adjusted Header with top offset */}
+      {/* Adjusted Header with dynamic top offset */}
       <header
         className={cn(
-          "fixed top-10 w-full z-40 transition-all duration-300", // Adjusted top-10 (assuming disclaimer height ~40px)
+          "fixed left-0 w-full z-40 transition-all duration-300",
           isScrolled
             ? "bg-background/80 backdrop-blur-md border-b"
             : "bg-transparent"
         )}
+        style={{ top: `${disclaimerHeight}px` }} // Dynamic offset based on disclaimer height
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
@@ -114,7 +131,10 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-background/95 backdrop-blur-sm border-b">
+          <div
+            className="md:hidden bg-background/95 backdrop-blur-sm border-b"
+            style={{ top: `${disclaimerHeight}px` }} // Offset mobile menu too
+          >
             <div className="container mx-auto px-4 py-4">
               <nav className="flex flex-col space-y-4">
                 {routes.map((route) => (
